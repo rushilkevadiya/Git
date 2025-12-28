@@ -1,0 +1,329 @@
+
+1️⃣ Version Control System (VCS)
+
+What is VCS?
+
+A Version Control System tracks changes in files so multiple developers can work safely.
+
+Why VCS?
+
+* History tracking
+* Backup & restore
+* Collaboration
+* Branching
+
+Popular VCS
+
+| Name    | Type        |
+| ------- | ----------- |
+| Git     | Distributed |
+| SVN     | Centralized |
+| Piper   | Google      |
+
+
+
+2️⃣ Git Introduction
+
+What is Git?
+
+Git is a distributed version control system created by Linus Torvalds.
+
+Key Features
+
+* Distributed
+* Fast
+* Offline access
+* Strong branching
+
+
+3️⃣ Git Installation & Setup
+
+1. Check Git
+git --version
+
+
+2. Global Configuration
+
+git config --global user.name "name"
+git config --global user.email "email address"
+git config --list
+
+4️⃣ Git Workflow
+
+Working Directory → Staging Area → Repository
+
+
+5️⃣ Repository Commands
+
+`git init`
+
+Work: Create new Git repo
+How: Adds `.git` folder
+
+cmd :git init
+
+
+`git clone`
+
+Work:Copy remote repo locally
+
+cmd :git clone URL
+
+
+6️⃣ File Tracking Commands
+
+`git status`
+
+Work: Show file states
+
+cmd :git status
+
+
+`git add`
+
+Work: Move files to staging area
+
+cmd :git add filename+extension
+cmd :git add .
+
+
+`git rm`
+
+Work: Remove file from Git
+
+cmd :
+git rm filename+extension
+git rm --f filename+extension
+
+
+
+7️⃣ Commit Commands
+
+`git commit`
+
+Work: Save snapshot to repository
+
+cmd :
+git commit -m "Message"
+git commit -am "Message"
+
+
+`git log`
+
+Work: View commit history
+
+cmd :
+git log
+git log --oneline
+git log --graph
+
+
+8️⃣ Undo & Recovery
+
+`git restore`
+
+Discard local changes
+
+cmd :
+git restore file.txt
+git restore --staged file.txt
+
+`git reset`
+
+Move HEAD pointer
+
+cmd :
+git reset --soft HEAD~1
+git reset --hard HEAD~1
+
+
+`git revert`
+
+Safe undo (new commit)
+
+cmd :git revert commit_id
+
+
+
+9️⃣ Git vs GitHub
+
+| Git   | GitHub   |
+| ----- | -------- |
+| Tool  | Platform |
+| Local | Cloud    |
+| CLI   | Web UI   |
+
+Popular Git Servers
+
+* GitHub
+* GitLab
+* Bitbucket
+* Azure Repos
+
+
+
+🔟 Remote Repository Commands
+
+`git remote`
+
+cmd :
+git remote add origin URL
+git remote -v
+
+
+
+`git push`
+
+Upload commits
+
+cmd :
+git push origin main
+git push -u origin main
+
+
+`git pull`
+
+Download + merge
+
+cmd :git pull origin main
+
+
+`git fetch`
+
+Download only
+
+cmd :git fetch
+
+
+1️⃣1️⃣ Branching
+
+`git branch`
+
+Create & list branches
+
+cmd :
+git branch
+git branch feature-login
+
+Delete branch:
+
+cmd :git branch -d feature-login
+
+
+`git checkout`
+
+Switch branches
+
+cmd :
+git checkout main
+git checkout -b feature-login
+
+
+
+`git switch` (New)
+
+cmd :
+git switch main
+git switch -c feature-login
+
+
+
+Branch Naming Convention
+
+```
+feat/login
+bug/fix-auth
+hotfix/payment
+release/v1.0
+```
+
+
+1️⃣2️⃣ Merging & Rebase
+
+`git merge`
+
+Combine branches
+
+cmd :
+git merge feature-login
+
+
+
+`git rebase`
+
+Rewrite history
+
+cmd :
+git rebase main
+
+
+✔ Clean history
+❌ Avoid after push
+
+
+
+1️⃣3️⃣ Merge Conflicts
+
+cmd :
+git status  # fix conflicts
+git add .
+git commit
+
+
+
+1️⃣4️⃣ Stashing
+
+Temporarily save work
+
+cmd :
+git stash
+git stash list
+git stash apply
+git stash pop
+git stash drop
+
+
+
+1️⃣5️⃣ Tags
+
+Mark releases
+
+
+git tag v1.0
+git tag -a v1.0 -m "Release"
+git push origin v1.0
+
+
+1️⃣6️⃣ Advanced Git Commands
+
+
+git diff
+git blame file.txt
+git cherry-pick commit_id
+git reflog
+git clean -f
+
+1️⃣7️⃣ Common Interview Questions
+
+1. Difference between Git & GitHub?
+2. What is staging area?
+3. Merge vs Rebase?
+4. What is HEAD?
+5. Reset vs Revert?
+6. What is stash?
+7. What is origin?
+
+ 🧠 One-Line Command Summary
+
+| Command | Purpose          |
+| ------- | ---------------- |
+| add     | Stage files      |
+| commit  | Save changes     |
+| push    | Upload           |
+| pull    | Download + merge |
+| fetch   | Download only    |
+| merge   | Combine branches |
+| rebase  | Rewrite history  |
+| stash   | Temporary save   |
+
+
